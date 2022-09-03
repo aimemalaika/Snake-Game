@@ -35,7 +35,7 @@
 .snake-food {
   width: 8px;
   height: 8px;
-  background: red;
+  background: green;
   position: absolute;
   margin: 1px;
 }
@@ -52,4 +52,8 @@
   height: 8px;
   background: black;
   margin: 1px;
+}
+
+.head {
+  background-color: red !important;
 }

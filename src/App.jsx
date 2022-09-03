@@ -4,7 +4,7 @@ import useKeyPress from './hooks/usekeypress';
 import './App.css'
 
 export default function App() {
-  const [snakeLength, setSnakeLength] = useState(1);
+  const [snakeSkin, setSnakeSkin] = useState(<div key={1} className="snake-skin head" />);
 
   const [foodPosition, setFoodPostion] = useState({
     top: `${Math.floor(Math.random() * 40) * 10}px`,
@@ -78,7 +78,9 @@ export default function App() {
     }
     
     if (snakePosition.top == foodPosition.top && snakePosition.left == foodPosition.left) {
-      setSnakeLength(snakeLength + 1);
+
+      setSnakeSkin(growSnake());
+
       setFoodPostion({
         top: `${Math.floor(Math.random() * 40) * 10}px`,
         left: `${Math.floor(Math.random() * 32) * 10}px`
@@ -96,7 +98,7 @@ export default function App() {
           {boxGrid}
         </div>
         <div className="snake-food" style={{ top: foodPosition.top, left: foodPosition.left }} /> 
-        <SnakeBody longueur={snakeLength} positions={snakePosition} />
+        <SnakeBody actualSkin={snakeSkin} positions={snakePosition} />
       </div>
     </div>
   )
