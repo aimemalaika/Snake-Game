@@ -1,0 +1,51 @@
+.snake-box {
+  border: 5px solid black;
+  height: 410px;
+  width: 330px;
+  margin: auto;
+  padding: 5px;
+  position: relative;
+}
+
+.snake-box-grid {
+  height: 410px;
+  width: 330px;
+  position: absolute;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.table-pixel {
+  width: 8px;
+  height: 8px;
+  max-height: 8px;
+  min-height: 8px;
+  max-width: 8px;
+  min-width: 8px;
+  border: 1px solid #e5e5e5;
+  font-size: 7px;
+}
+
+.snake-food {
+  width: 8px;
+  height: 8px;
+  background: red;
+  position: absolute;
+  margin: 1px;
+  top: 35px;
+}
+
+.snake-body {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  position: absolute;
+}
+
+.snake-skin {
+  width: 8px;
+  height: 8px;
+  background: black;
+  margin: 1px;
+}
